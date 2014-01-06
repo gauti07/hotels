@@ -1,0 +1,19 @@
+ <div class="container data">
+ 
+        <%= image_tag('Indian_Food-4.jpg', :alt =>'I am Sorry', :class =>"food") %>
+      </div>
+
+      <div class="row marketing">
+        <div class="col-lg-6">
+        <% @hotels.each do |hotel| %>
+          <h4><%= link_to hotel.name,review_url(hotel.id) %></h4>
+          <p><%= hotel.description %></p>
+          <p><%= hotel.user.name %></p>
+          <p><%= hotel.user.email %></p>
+        <% end %>
+
+         
+        </div>
+ </div>
+	
+

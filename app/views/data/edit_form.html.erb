@@ -1,0 +1,11 @@
+<div>
+	<div id="error-note"></div>
+	<%= form_tag(update_path, method: :put) do %>
+	<input name = "id" type = "hidden" value="<%= @hotel.id %>"/>
+	 <input name = "name" id="name" type = "text" class = "form-control" placeholder = "Hotel Name" value="<%= @hotel.name %>" required/>
+	 <input name = "city" id="city" type = "text" class = "form-control" placeholder = "City" value="<%= @hotel.city %>" required/>
+	 <textarea name = "description" id="description" class = "form-control" placeholder = "Hotel Description" required><%= @hotel.name %></textarea>
+	 <input name = "rating" id="rating" class = "form-control" type="number" min = "1" max = "5" placeholder = "Rating" value="<%= @hotel.rating %>" required/>
+	 <input type="submit" id="submitbutton" class="btn btn-primary"/>
+	<% end %>
+</div>

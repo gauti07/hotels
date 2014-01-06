@@ -1,0 +1,19 @@
+<div class="container data">
+	<h1><%= @hotel.name %></h1>
+	<p><%=  @hotel.description %></p>
+    <p><%=  @hotel.user.name %></p>
+    <hr>
+    <h1>User Reviews</h1>
+    <% @hotel.reviews.each do |review| %>
+    <p><%= review.content  %></p>
+    <p><%= review.user.name %></p>
+    <hr>
+    <% end %>
+
+    <%= form_tag(addreview_path, method: :post) do %>
+        <input name = "id" type = "hidden" value="<%= @hotel.id %>"/>
+    	<textarea name = "content" class = "form-control" placeholder = "Hotel review" required></textarea>
+    	<input type="submit" class="btn btn-primary"/>
+    <% end %>
+
+</div>

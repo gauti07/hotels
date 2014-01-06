@@ -1,0 +1,16 @@
+<div class="data container">
+	<div class="col-lg-12">
+		<% @hotels.each do |hotel| %>
+		<h4><%= hotel.name %></h4>
+		<h4><%= hotel.city %></h4>
+		<h4><%= hotel.description %></h4>
+		<h4><%= hotel.rating %></h4>	
+			<div>
+				<%= link_to 'Edit',edit_url(hotel.id), :class => 'btn btn-info' %>
+				<%= link_to 'Delete',delete_url(hotel.id), :class => 'btn btn-info', method: :delete %>
+			</div>
+		<hr>
+		<% end %>
+	</div>
+	
+</div>
