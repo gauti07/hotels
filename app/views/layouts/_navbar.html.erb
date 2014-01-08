@@ -4,20 +4,24 @@
             <li><%= link_to 'About',about_path %></li>
             <li><%= link_to 'Contact',contact_path %></li>
             <li><%= link_to 'Add Hotel',add_path %></li>
-            <li><%= link_to 'Manage',manage_path %></li>
+            <li><%= link_to 'Manage', show_path %></li>
+
             <li><!-- Split button -->
 				<div class="btn-group">
+					
 				  <button type="button" class="btn btn-primary">Account</button>
 				  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
 				    <span class="caret"></span>
 				    <span class="sr-only">Toggle Dropdown</span>
 				  </button>
 				  <ul class="dropdown-menu" role="menu">
-				    <% if user_signed_in? %>
+
 				    <!-- User Has Logged in -->
+				    <% if user_signed_in? %>
+
 				    <li><a href="#"><%= current_user.name %></a></li>
 				    <li><a href="#"><%= current_user.email %></a></li>
-				    <li><%= link_to "Logout",destroy_user_session_path,method: :delete %></li>
+				    <li><%= link_to "Logout",destroy_user_session_path, method: :delete %></li>
 				    
 				    <% else %>
 				    <li><%= link_to "Sign In",new_user_session_path %></li>
