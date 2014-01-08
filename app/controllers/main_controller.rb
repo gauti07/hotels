@@ -18,4 +18,3 @@ class MainController < ApplicationController
     render :json => news
   end 
 end
-
