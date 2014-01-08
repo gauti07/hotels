@@ -13,7 +13,7 @@ Appdev::Application.routes.draw do
   put '/update' => 'data#update',as: :update
   delete '/delete/:id' => 'data#delete',as: :delete
   get '/manage' => 'data#index',as: :manage
-
+  get '/get_ticker' => 'main#get_ticker'
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

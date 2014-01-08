@@ -11,12 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140102115106) do
+ActiveRecord::Schema.define(version: 20140106125410) do
 
   create_table "hotels", force: true do |t|
     t.string   "name"
     t.string   "city"
-    t.string   "rating"
+    t.integer  "rating"
     t.string   "description"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -27,6 +27,14 @@ ActiveRecord::Schema.define(version: 20140102115106) do
     t.text     "content"
     t.integer  "hotel_id"
     t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "tickers", force: true do |t|
+    t.text     "title"
+    t.string   "content"
+    t.boolean  "published"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

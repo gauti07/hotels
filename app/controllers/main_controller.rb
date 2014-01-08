@@ -12,5 +12,10 @@ class MainController < ApplicationController
   def review
   	@hotel = Hotel.find params[:id]
   end
+
+  def get_ticker
+    news = Ticker.all
+    render :json => news
+  end 
 end
 

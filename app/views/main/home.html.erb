@@ -1,7 +1,9 @@
- <div class="container data">
+    
+<div class = "container" ng-controller = "homeController" >
+    <div class="container data">
  
         <%= image_tag('Indian_Food-4.jpg', :alt =>'I am Sorry', :class =>"food") %>
-      </div>
+    
 
       <div class="row marketing">
         <div class="col-lg-6">
@@ -10,10 +12,17 @@
           <p><%= hotel.description %></p>
           <p><%= hotel.user.name %></p>
           <p><%= hotel.user.email %></p>
+
         <% end %>
-
-         
         </div>
- </div>
-	
+          <div class="col-lg-6 well" >
+            <ul>
+            <li ng-repeat="a in myname">{{a.name}}</li>
+            <li ng-repeat="a in myname">{{a.age}}</li>
+          </ul>
+          </div>        
+      </div>
 
+	{{1+2}}
+</div>
+</div>
